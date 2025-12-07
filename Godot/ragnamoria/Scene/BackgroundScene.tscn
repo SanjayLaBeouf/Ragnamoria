@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwsff7yglq25"]
+
+[ext_resource type="Texture2D" uid="uid://dgvgdxal36sq8" path="res://Assets/Background/Background.jpg" id="1_q3jo6"]
+[ext_resource type="Shader" uid="uid://ctnbtosdxo12j" path="res://Scene/BackgroundScene.gdshader" id="1_xowgb"]
+[ext_resource type="Script" uid="uid://d0tif6c7i7r1u" path="res://Scripts/texture_rect.gd" id="3_38mfm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cboau"]
+shader = ExtResource("1_xowgb")
+shader_parameter/offset = Vector2(0, 0)
+
+[node name="CharacterSelectBackgroundScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_cboau")
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+texture = ExtResource("1_q3jo6")
+expand_mode = 2
+script = ExtResource("3_38mfm")

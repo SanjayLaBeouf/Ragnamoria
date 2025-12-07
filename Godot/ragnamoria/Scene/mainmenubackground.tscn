@@ -1,0 +1,44 @@
+[gd_scene load_steps=10 format=3 uid="uid://cq5k88ubu5an"]
+
+[ext_resource type="Shader" uid="uid://ctnbtosdxo12j" path="res://Scene/BackgroundScene.gdshader" id="1_t73o7"]
+[ext_resource type="Texture2D" uid="uid://bdxy6uqu1jxt4" path="res://Assets/Background/418461662_5b0eb2d3-1655-4bc0-82cb-c8bf573ef943.jpg" id="2_3h38o"]
+[ext_resource type="Script" uid="uid://dqvnfyruyoks0" path="res://Scripts/Stars.gd" id="3_t73o7"]
+[ext_resource type="Texture2D" uid="uid://bvpvqsvcmc1t3" path="res://Assets/Background/trees.png" id="4_rk34o"]
+[ext_resource type="Script" uid="uid://dc0htdhk1wavb" path="res://Scripts/fuana.gd" id="5_ocvgc"]
+[ext_resource type="Texture2D" uid="uid://dnt7thre78ss0" path="res://Assets/Background/fog.png" id="7_ttg7r"]
+[ext_resource type="Script" uid="uid://j6xbdnkkpqbi" path="res://Scripts/fog.gd" id="8_txwew"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ot5q2"]
+shader = ExtResource("1_t73o7")
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_svlbe"]
+shader = ExtResource("1_t73o7")
+shader_parameter/offset = Vector2(0, 0)
+
+[node name="Mainmenubackground" type="Node2D"]
+
+[node name="Stars" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_ot5q2")
+offset_right = 1151.0
+offset_bottom = 497.0
+texture = ExtResource("2_3h38o")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("3_t73o7")
+
+[node name="Fuana" type="TextureRect" parent="."]
+offset_right = 1792.0
+offset_bottom = 1024.0
+scale = Vector2(0.6433826, 0.6338622)
+texture = ExtResource("4_rk34o")
+script = ExtResource("5_ocvgc")
+
+[node name="Fog" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_svlbe")
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("7_ttg7r")
+expand_mode = 2
+script = ExtResource("8_txwew")
