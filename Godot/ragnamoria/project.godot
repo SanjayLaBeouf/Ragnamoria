@@ -25,6 +25,10 @@ Global="*res://Scripts/Global.gd"
 
 version_control/autoload_on_startup=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sprite_cutter/plugin.cfg")
+
 [input]
 
 ui_left={
