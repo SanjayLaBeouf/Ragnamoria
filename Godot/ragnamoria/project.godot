@@ -20,6 +20,13 @@ config/icon="res://icon.svg"
 SaveManager="*res://Scripts/SaveManager.gd"
 PlayerData="*res://Scripts/PlayerData.gd"
 Global="*res://Scripts/Global.gd"
+LevelTransition="*res://Scene/level_transition.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor]
 
